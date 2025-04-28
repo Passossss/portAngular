@@ -15,7 +15,7 @@ export class ProjectsService {
         description: 'A sample application built with Angular and TypeScript for demonstration purposes.',
         projectLink: 'https://sample1-app.example.com',
         tags: [Tag.ANGULAR, Tag.TYPESCRIPT],
-        pictures: []
+        pictures: ["../../../assets/Image1.png", "../../../assets/Image2.png", "../../../assets/Image3.png"]
       },
       {
         id: 1,

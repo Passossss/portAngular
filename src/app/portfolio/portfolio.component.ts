@@ -21,6 +21,7 @@ export class PortfolioComponent implements OnInit {
   nodejs: boolean = false;
   aspnet: boolean = false;
   react: boolean = false;
+  filtering: Boolean = false;
 
   constructor(private titleService: Title, private projectService: ProjectsService) {
     this.titleService.setTitle('Gu - Portfolio');
@@ -59,6 +60,30 @@ export class PortfolioComponent implements OnInit {
     if (this.react) {
       filterTags.push(Tag.REACT);
     }
+
+    if (this.python || this.csharp || this.java || this.angular || this.typescript || this.nodejs || this.aspnet || this.javascript || this.react) {
+      this.filtering = true;
+    } else {
+      this.filtering = false;
+    }
+
+
     this.projects = this.projectService.GetProjectsByFilter(filterTags);
 }
+
+ResetFilters() {
+  this.python = false;
+  this.csharp = false;
+  this.java = false;
+  this.angular = false;
+  this.typescript = false;
+  this.nodejs = false;
+  this.aspnet = false;
+  this.javascript = false;
+  this.react = false;
+  this.filtering = false;
+  
+  this.projects = this.projectService.GetProjects();
+}
+
 }

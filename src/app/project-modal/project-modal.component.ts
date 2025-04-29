@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal';
-import { CarouselModule } from 'ngx-bootstrap/carousel';
+//import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { Project } from '../_models/Project';
 //import { ProjectCardComponent } from '../project-card/project-card.component';
 

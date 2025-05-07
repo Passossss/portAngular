@@ -10,7 +10,7 @@ import { ProjectsService } from '../_services/projects.service';
   styleUrls: ['./portfolio.component.css']
 })
 export class PortfolioComponent implements OnInit {
-  projects = {} as Project[];
+  projects = [] as Project[];
   isCollapsed: boolean = true;
   typescript: boolean = false;
   javascript: boolean = false;

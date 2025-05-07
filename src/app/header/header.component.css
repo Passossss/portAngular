@@ -1,4 +1,19 @@
 .jumbotron {
     padding: 2rem 1rem;
-    background-color: #e9ecef;
+    background-color: #a67fb9;
+    position: relative;
+    text-align: center;
+}
+
+.jumbotron .social-icons {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+}
+
+.jumbotron .social-icons a {
+    margin: 0 10px;
 }

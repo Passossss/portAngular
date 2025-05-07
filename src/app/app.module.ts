@@ -15,6 +15,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { FormsModule } from '@angular/forms';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
+
 //import { CarouselModule } from 'ngx-owl-carousel-o';
 
 
@@ -37,9 +38,9 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
     ModalModule.forRoot(),
     CarouselModule.forRoot(),
     CarouselModule,
+    FormsModule,
     AccordionModule.forRoot(),
     CollapseModule.forRoot(),
-    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

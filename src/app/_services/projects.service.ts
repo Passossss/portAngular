@@ -7,62 +7,62 @@ import { Tag } from '../_models/Tag';
 })
 export class ProjectsService {
 
-    projects: Project[] = [
-      {
-        id: 0,
-        name: 'Sample1 App',
-        summary: 'Test Description',
-        description: 'A sample application built with Angular and TypeScript for demonstration purposes.',
-        projectLink: 'https://sample1-app.example.com',
-        tags: [Tag.ANGULAR, Tag.TYPESCRIPT],
-        pictures: ["../../../assets/Image1.png", "../../../assets/Image2.png", "../../../assets/Image3.png"]
-      },
-      {
-        id: 1,
-        name: 'Sample2 App',
-        summary: 'Test2',
-        description: 'Another sample application showcasing Angular and C# integration.',
-        projectLink: 'https://sample2-app.example.com',
-        tags: [Tag.ANGULAR, Tag.CSHARP],
-        pictures: ["../../../assets/Image1.png", "../../../assets/Image2.png", "../../../assets/Image3.png"]
-      },
-      {id: 2, name: "Sample3 .Net App", pictures: ["../../assets/Image1.png","../../assets/Image2.png","../../assets/Image3.png"], projectLink: "//www.github.com", summary: "Fullstack web app developed using React and ASP.NET", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", tags: [Tag.REACT ,Tag.JAVA, Tag.ASPNET]},
-      {id: 3, name: "Sample4 .Net App", pictures: ["../../assets/Image1.png","../../assets/Image2.png","../../assets/Image3.png"], projectLink: "//www.github.com", summary: "Fullstack web app developed using React and ASP.NET", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", tags: [Tag.REACT ,Tag.PYTHON]},
-      {id: 4, name: "Sample5 .Net App", pictures: ["../../assets/Image1.png","../../assets/Image2.png","../../assets/Image3.png"], projectLink: "//www.github.com", summary: "Fullstack web app developed using React and ASP.NET", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", tags: [Tag.REACT ,Tag.CSHARP, Tag.ASPNET]},
-      {id: 5, name: "Sample6 .Net App", pictures: ["../../assets/Image1.png","../../assets/Image2.png","../../assets/Image3.png"], projectLink: "//www.github.com", summary: "Fullstack web app developed using React and ASP.NET", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", tags: [Tag.REACT ,Tag.CSHARP, Tag.ASPNET]}
-    ];
+  projects: Project[] = [
+    {
+      id: 0,
+      name: 'EmprestimoBooks',
+      summary: 'Sistema de empréstimo de livros em ASP.NET',
+      description: 'Sistema completo com funcionalidades de login, cadastro, adição de livros, empréstimos e geração de relatórios em PDF utilizando .NET 8.0 e SQL Server.',
+      projectLink: 'https://github.com/seuusuario/EmprestimoBooks',
+      tags: [Tag.CSHARP, Tag.ASPNET, Tag.SQL],
+      pictures: ["../../../assets/emprestimobooks1.png", "../../../assets/emprestimobooks2.png"]
+    },
+    {
+      id: 1,
+      name: 'Medicaly',
+      summary: 'Aplicação para gestão médica',
+      description: 'Aplicativo com foco em agendamentos, histórico de consultas e organização de dados médicos. Feito com Angular e backend em Node.js.',
+      projectLink: 'https://github.com/seuusuario/Medicaly',
+      tags: [Tag.ANGULAR, Tag.TYPESCRIPT, Tag.NODE],
+      pictures: ["../../../assets/medicaly1.png", "../../../assets/medicaly2.png"]
+    },
+    { 
+      id: 2,
+      name: 'Clima Web App',
+      summary: 'App de clima com consumo de API externa',
+      description: 'Projeto feito com Vue.js que mostra a previsão do tempo usando uma API pública de clima.',
+      projectLink: 'https://github.com/seuusuario/clima-app',
+      tags: [Tag.VUE, Tag.JAVASCRIPT],
+      pictures: ["../../../assets/clima1.png"]
+    },
+    {
+      id: 3,
+      name: 'Testes Automatizados Robot',
+      summary: 'Repositório de testes automatizados com Robot Framework',
+      description: 'Projeto de automação de testes com foco em QA, usando Robot Framework e Python.',
+      projectLink: 'https://github.com/seuusuario/testes-automatizados-robot',
+      tags: [Tag.PYTHON, Tag.ROBOT],
+      pictures: ["../../../assets/robot1.png"]
+    }
+  ];
 
   constructor() { }
 
-  GetProjects()
-  {
+  GetProjects() {
     return this.projects;
   }
+
   GetProjectById(id: number): Project {
-    let project = this.projects.find(project => project.id === id);
-  
-    if (project === undefined) {
-      throw new TypeError(`Este projeto nao foi encontrado o id: ${id}`);
+    const project = this.projects.find(p => p.id === id);
+    if (!project) {
+      throw new TypeError(`Projeto não encontrado para o id: ${id}`);
     }
-  
     return project;
   }
 
   GetProjectsByFilter(filterTags: Tag[]): Project[] {
-    let filteredProjects: Project[] = [];
-  
-    this.projects.forEach(function (project) {
-      let foundAll = true;
-      filterTags.forEach(function (filterTag) {
-        if (project.tags.includes(filterTag) === false) {
-          foundAll = false;
-        }
-      });
-      if (foundAll) {
-        filteredProjects.push(project);
-      }
-    });
-  
-    return filteredProjects;
+    return this.projects.filter(project =>
+      filterTags.every(tag => project.tags.includes(tag))
+    );
   }
 }

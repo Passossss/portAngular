@@ -13,16 +13,16 @@ export class ProjectsService {
       name: 'EmprestimoBooks',
       summary: 'Sistema de empréstimo de livros em ASP.NET',
       description: 'Sistema completo com funcionalidades de login, cadastro, adição de livros, empréstimos e geração de relatórios em PDF utilizando .NET 8.0 e SQL Server.',
-      projectLink: 'https://github.com/seuusuario/EmprestimoBooks',
+      projectLink: 'https://github.com/passossss/EmprestimoBooks',
       tags: [Tag.CSHARP, Tag.ASPNET, Tag.SQL],
-      pictures: ["../../../assets/emprestimobooks1.png", "../../../assets/emprestimobooks2.png"]
+      pictures: ["../../../assets/portBook.png", "../../../assets/portBook.png"]
     },
     {
       id: 1,
       name: 'Medicaly',
       summary: 'Aplicação para gestão médica',
       description: 'Aplicativo com foco em agendamentos, histórico de consultas e organização de dados médicos. Feito com Angular e backend em Node.js.',
-      projectLink: 'https://github.com/seuusuario/Medicaly',
+      projectLink: 'https://github.com/passossss/medicaly.back',
       tags: [Tag.ANGULAR, Tag.TYPESCRIPT, Tag.NODE],
       pictures: ["../../../assets/medicaly1.png", "../../../assets/medicaly2.png"]
     },

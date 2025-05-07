@@ -19,7 +19,7 @@ export class ProjectCardComponent {
     const modalOptions: ModalOptions = {
       class: 'modal-lg',
       initialState: {
-        projects : this.project
+        project : this.project
       }  
 
     };

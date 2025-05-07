@@ -15,6 +15,8 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { FormsModule } from '@angular/forms';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { CommonModule } from '@angular/common';
+import { ProjectModalComponent } from './project-modal/project-modal.component';
 
 //import { CarouselModule } from 'ngx-owl-carousel-o';
 
@@ -27,6 +29,7 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
     HomeComponent,
     PortfolioComponent,
     ResumeComponent,
+    ProjectModalComponent,
     ContactComponent,
     ProjectCardComponent,
     
@@ -34,6 +37,7 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CommonModule,
     BrowserAnimationsModule,
     ModalModule.forRoot(),
     CarouselModule.forRoot(),

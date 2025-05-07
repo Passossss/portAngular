@@ -49,7 +49,7 @@ export class PortfolioComponent implements OnInit {
       filterTags.push(Tag.JAVA);
     }
     if (this.nodejs) {
-      filterTags.push(Tag.NODEJS);
+      filterTags.push(Tag.NODE);
     }
     if (this.aspnet) {
       filterTags.push(Tag.ASPNET);

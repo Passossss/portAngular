@@ -1,15 +1,108 @@
 <div class="container text-center">
-    <button (click)="DownloadFile()" class="btn btn-primary mb-5 shadow border">Download PDF Resume</button>
+  <button (click)="DownloadFile()" class="btn btn-primary mb-5 shadow border">Download PDF Resume</button>
+ 
+<div class="pb-2">
+
+  <accordion [isAnimated]="true" class="shadow">
+    <accordion-group [(isOpen)]="isWorkExperienceOpen">
+      <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
+        <div style="visibility: hidden;">></div>
+        <div class="btn-link">Work Experience</div>
+
+
+        <div style="width: 10.95px;">
+          <div *ngIf="!isWorkExperienceOpen" style="color: white;">&gt;</div>
+          <div *ngIf="isWorkExperienceOpen" style="color: white;">v</div>
+        </div>
+      </button>
+    </accordion-group>
+    <accordion-group [(isOpen)]="isCertificationsOpen">
+      <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
+        <div style="visibility: hidden;">></div>
+        <div class="btn-link">Certificado</div>
+
+
+        <div style="width: 10.95px;">
+          <div *ngIf="!isCertificationsOpen" style="color: white;">&gt;</div>
+          <div *ngIf="isCertificationsOpen" style="color: white;">v</div>
+        </div>
+      </button>
+      <ul>
+        <li>Certificado em Desenvolvimento Web Full Stack - [Nome da Instituição] - [Ano]</li>
+        <li>Certificado em Gerenciamento de Projetos (PMBOK) - [Nome da Instituição] - [Ano]</li>
+        <li>Certificado em Inglês Avançado (C1 Level) - [Nome da Instituição] - [Ano]</li>
+      </ul>
+    </accordion-group>
+    <accordion-group [(isOpen)]="isSkillsOpen">
+      <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
+        <div style="visibility: hidden;">></div>
+        <div class="btn-link">Habilidades/Skills</div>
+
+
+        <div style="width: 10.95px;">
+          <div *ngIf="!isSkillsOpen" style="color: white;">&gt;</div>
+          <div *ngIf="isSkillsOpen" style="color: white;">v</div>
+        </div>
+      </button>
+      <ul>
+        <li>**Programação:** JavaScript, Python, HTML, CSS, Java</li>
+        <li>**Frameworks/Bibliotecas:** React, Angular, Node.js, Bootstrap</li>
+        <li>**Bancos de Dados:** MySQL, PostgreSQL, MongoDB</li>
+        <li>**Ferramentas:** Git, Docker, AWS, Azure</li>
+        <li>**Metodologias:** Agile, Scrum</li>
+        <li>**Idiomas:** Português (Nativo), Inglês (Avançado), Espanhol (Intermediário)</li>
+      </ul>
+    </accordion-group>
+    <accordion-group [(isOpen)]="isEducationOpen">
+      <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
+        <div style="visibility: hidden;">></div>
+        <div class="btn-link">Educação</div>
+
+
+        <div style="width: 10.95px;">
+          <div *ngIf="!isEducationOpen" style="color: white;">&gt;</div>
+          <div *ngIf="isEducationOpen" style="color: white;">v</div>
+        </div>
+      </button>
+      <ul>
+        <li>**Bacharelado em Ciência da Computação** - Universidade Federal do Paraná (UFPR) - Concluído em 2018</li>
+        <li>**Pós-graduação em Engenharia de Software** - Pontifícia Universidade Católica do Paraná (PUCPR) - Concluído em 2020</li>
+      </ul>
+    </accordion-group>
+    <accordion-group heading="Work Experience">
+      <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
+        <div style="visibility: hidden;">></div>
+        <div class="btn-link">Work Experience</div>
+
+
+        <div style="width: 10.95px;">
+          <div *ngIf="!isWorkExperienceOpen" style="color: white;">&gt;</div>
+          <div *ngIf="isWorkExperienceOpen" style="color: white;">v</div>
+        </div>
+      </button>
+      <ul>
+        <li>
+          **Desenvolvedor Front-end** - Empresa XYZ - 2020 até o Presente
+          <ul>
+            <li>Desenvolvimento e manutenção de interfaces de usuário responsivas utilizando React e Redux.</li>
+            <li>Colaboração com a equipe de design para implementação de novas funcionalidades.</li>
+            <li>Otimização de performance e testes unitários e de integração.</li>
+          </ul>
+        </li>
+        <li>
+          **Analista de Sistemas Júnior** - Empresa ABC - 2018 - 2020
+          <ul>
+            <li>Análise de requisitos, desenvolvimento e implementação de sistemas web em Java.</li>
+            <li>Suporte técnico e resolução de problemas.</li>
+            <li>Participação em projetos utilizando metodologia Scrum.</li>
+          </ul>
+        </li>
+      </ul>
+    </accordion-group>
+  </accordion>
+
+</div>
+
   
-    <accordion>
-      <accordion-group heading="Work Experience">
-        </accordion-group>
-      <accordion-group heading="Education">
-        </accordion-group>
-      <accordion-group heading="Certifications">
-        </accordion-group>
-      <accordion-group heading="Skills">
-        </accordion-group>
-    </accordion>
-  
-  </div>
+
+</div>

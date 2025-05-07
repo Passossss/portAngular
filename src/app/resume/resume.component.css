@@ -5,3 +5,17 @@ accordion-group::ng-deep .btn-link {
   accordion-group::ng-deep .card-header {
     background-color: #6109aa;
   }
+  .custom-filter-btn {
+    background-color: #6f42c1; /* roxo Bootstrap */
+    color: white;
+    border: 1px solid #6f42c1;
+    transition: all 0.3s ease;
+  }
+  
+  .custom-filter-btn:hover {
+    background-color: white;
+    color: #6f42c1;
+    box-shadow: 0 0 10px rgba(111, 66, 193, 0.6); /* brilho suave */
+    border-color: #6f42c1;
+  }
+  

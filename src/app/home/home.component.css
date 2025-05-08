@@ -7,3 +7,6 @@
     /* opcional: bordas levemente arredondadas */
     margin-bottom: 1rem;
 }
+.jumbotron h2 {
+    font-weight: bold;
+}

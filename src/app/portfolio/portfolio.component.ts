@@ -24,7 +24,7 @@ export class PortfolioComponent implements OnInit {
   filtering: Boolean = false;
 
   constructor(private titleService: Title, private projectService: ProjectsService) {
-    this.titleService.setTitle('Gu - Portfolio');
+    this.titleService.setTitle('Gustavo Passos - Portfolio');
   }
 
   ngOnInit(): void {
@@ -69,21 +69,21 @@ export class PortfolioComponent implements OnInit {
 
 
     this.projects = this.projectService.GetProjectsByFilter(filterTags);
-}
+  }
 
-ResetFilters() {
-  this.python = false;
-  this.csharp = false;
-  this.java = false;
-  this.angular = false;
-  this.typescript = false;
-  this.nodejs = false;
-  this.aspnet = false;
-  this.javascript = false;
-  this.react = false;
-  this.filtering = false;
-  
-  this.projects = this.projectService.GetProjects();
-}
+  ResetFilters() {
+    this.python = false;
+    this.csharp = false;
+    this.java = false;
+    this.angular = false;
+    this.typescript = false;
+    this.nodejs = false;
+    this.aspnet = false;
+    this.javascript = false;
+    this.react = false;
+    this.filtering = false;
+
+    this.projects = this.projectService.GetProjects();
+  }
 
 }

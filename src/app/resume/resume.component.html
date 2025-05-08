@@ -1,78 +1,100 @@
 <div class="container text-center">
-  <button (click)="DownloadFile()" class="btn btn-primary mb-5 shadow border custom-filter-btn">Download Resume em PDF</button>
- 
-<div class="pb-2">
+  <button (click)="DownloadFile()" class="btn btn-primary mb-5 shadow border custom-filter-btn">
+    Download Currículo em PDF
+  </button>
 
-  <accordion [isAnimated]="true" class="shadow">
-    <accordion-group [(isOpen)]="isWorkExperienceOpen">
-      <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
-        <div style="visibility: hidden;">></div>
-        <div class="btn-link">Experiencias</div>
+  <div class="pb-2">
+    <accordion [isAnimated]="true" class="shadow">
 
-
-        <div style="width: 10.95px;">
-          <div *ngIf="!isWorkExperienceOpen" style="color: white;">&gt;</div>
-          <div *ngIf="isWorkExperienceOpen" style="color: white;">v</div>
-        </div>
-      </button>
-    </accordion-group>  
-    <accordion-group [(isOpen)]="isCertificationsOpen">
-      <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
-        <div style="visibility: hidden;">></div>
-        <div class="btn-link">Certificado</div>
-
-
-        <div style="width: 10.95px;">
-          <div *ngIf="!isCertificationsOpen" style="color: white;">&gt;</div>
-          <div *ngIf="isCertificationsOpen" style="color: white;">v</div>
-        </div>
-      </button>
-      <ul>
-        <li>Certificado em Desenvolvimento Web Full Stack - [Nome da Instituição] - [Ano]</li>
-        <li>Certificado em Gerenciamento de Projetos (PMBOK) - [Nome da Instituição] - [Ano]</li>
-        <li>Certificado em Inglês Avançado (C1 Level) - [Nome da Instituição] - [Ano]</li>
-      </ul>
-    </accordion-group>
-    <accordion-group [(isOpen)]="isSkillsOpen">
-      <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
-        <div style="visibility: hidden;">></div>
-        <div class="btn-link">Habilidades/Skills</div>
+      <!-- EXPERIÊNCIAS -->
+      <accordion-group [(isOpen)]="isWorkExperienceOpen">
+        <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
+          <div style="visibility: hidden;">></div>
+          <div class="btn-link">Experiências</div>
+          <div style="width: 10.95px;">
+            <div *ngIf="!isWorkExperienceOpen" style="color: white;">&gt;</div>
+            <div *ngIf="isWorkExperienceOpen" style="color: white;">v</div>
+          </div>
+        </button>
+        <ul>
+          <li>
+            <strong>IMAP - Instituto de Administração Pública</strong> — Estágio Desenvolvimento de Aplicações (Jan/2025
+            - Atualmente)<br>
+            Desenvolvimento e gestão de sistemas e servidores, com foco em ASP.NET, manutenção de servidores (Windows
+            Server e Linux), automação de processos, ajustes em sites governamentais e administração de banco de dados.
+          </li>
+          <li>
+            <strong>Tecnoponto - Tecnologia de Pontos</strong> — Estágio TI (Set/2024 - Dez/2024)<br>
+            Suporte técnico (hardware/software), redes, atendimento de chamados, banco de dados (SQL e NoSQL),
+            instalação/configuração de softwares e uso de sistemas operacionais Windows e Linux (Debian e Ubuntu).
+          </li>
+          <li>
+            <strong>Biotrop - Tecnologia da Informação</strong> — Aprendiz TI (Fev/2023 - Abr/2024)<br>
+            Administração de sistemas, suporte técnico, gestão de tarefas via Trello e Azure DevOps, manutenção de
+            computadores, serviços Microsoft e infraestrutura de TI.
+          </li>
+        </ul>
+      </accordion-group>
 
 
-        <div style="width: 10.95px;">
-          <div *ngIf="!isSkillsOpen" style="color: white;">&gt;</div>
-          <div *ngIf="isSkillsOpen" style="color: white;">v</div>
-        </div>
-      </button>
-      <ul>
-        <li>**Programação:** JavaScript, Python, HTML, CSS, Java</li>
-        <li>**Frameworks/Bibliotecas:** React, Angular, Node.js, Bootstrap</li>
-        <li>**Bancos de Dados:** MySQL, PostgreSQL, MongoDB</li>
-        <li>**Ferramentas:** Git, Docker, AWS, Azure</li>
-        <li>**Metodologias:** Agile, Scrum</li>
-        <li>**Idiomas:** Português (Nativo), Inglês (Avançado), Espanhol (Intermediário)</li>
-      </ul>
-    </accordion-group>
-    <accordion-group [(isOpen)]="isEducationOpen">
-      <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
-        <div style="visibility: hidden;">></div>
-        <div class="btn-link">Educação</div>
+      <!-- SKILLS -->
+      <accordion-group [(isOpen)]="isSkillsOpen">
+        <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
+          <div style="visibility: hidden;">></div>
+          <div class="btn-link">Habilidades / Skills</div>
+          <div style="width: 10.95px;">
+            <div *ngIf="!isSkillsOpen" style="color: white;">&gt;</div>
+            <div *ngIf="isSkillsOpen" style="color: white;">v</div>
+          </div>
+        </button>
+        <ul>
+          <li><strong>Programação:</strong> C#, Typescript, Golang, Javascript, Python, Java, HTML, CSS</li>
+          <li><strong>Frameworks:</strong> ASP.NET, Angular, Vue.js, Bootstrap</li>
+          <li><strong>Bancos de Dados:</strong> SQL Server, MySQL, PostgreSQL, MongoDB</li>
+          <li><strong>Ferramentas:</strong> Git, Docker, Robot Framework, xUnit, Cypress, Jenkins, Jira, Trello</li>
+          <li><strong>Metodologias:</strong> Scrum, Kanban, TDD, BDD</li>
+          <li><strong>Idiomas:</strong> Português (Nativo), Inglês (Intermediário)</li>
+        </ul>
+      </accordion-group>
 
+      <!-- EDUCAÇÃO -->
+      <accordion-group [(isOpen)]="isEducationOpen">
+        <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
+          <div style="visibility: hidden;">></div>
+          <div class="btn-link">Educação</div>
+          <div style="width: 10.95px;">
+            <div *ngIf="!isEducationOpen" style="color: white;">&gt;</div>
+            <div *ngIf="isEducationOpen" style="color: white;">v</div>
+          </div>
+        </button>
+        <ul>
+          <li><strong>Graduação em Engenharia de Software</strong> - Pontifícia Universidade Católica do Paraná (PUCPR)
+            - Em andamento (previsão dez/2026)</li>
+          <li><strong>Técnico em Informática</strong> - Completo</li>
+          <li><strong>Técnico Mecatrônica</strong> - Completo</li>
+        </ul>
+      </accordion-group>
 
-        <div style="width: 10.95px;">
-          <div *ngIf="!isEducationOpen" style="color: white;">&gt;</div>
-          <div *ngIf="isEducationOpen" style="color: white;">v</div>
-        </div>
-      </button>
-      <ul>
-        <li>**Bacharelado em Ciência da Computação** - Universidade Federal do Paraná (UFPR) - Concluído em 2018</li>
-        <li>**Pós-graduação em Engenharia de Software** - Pontifícia Universidade Católica do Paraná (PUCPR) - Concluído em 2020</li>
-      </ul>
-    </accordion-group>
-  </accordion>
+      <!-- CERTIFICADOS -->
+      <accordion-group [(isOpen)]="isCertificationsOpen">
+        <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
+          <div style="visibility: hidden;">></div>
+          <div class="btn-link">Certificados</div>
+          <div style="width: 10.95px;">
+            <div *ngIf="!isCertificationsOpen" style="color: white;">&gt;</div>
+            <div *ngIf="isCertificationsOpen" style="color: white;">v</div>
+          </div>
+        </button>
+        <ul>
+          <li>Certificado em Testes Automatizados</li>
+          <li>Certificado em Redes Computadores CISCO</li>
+          <li>Certificado em POO Curso Balta.io</li>
+          <li>Certificado em Desenvolvimento Web com Vue.js</li>
+          <li>Curso de Administração de Empresas (complementar)</li>
+          <li>Curso de Informática Ofiice365</li>
+        </ul>
+      </accordion-group>
 
-</div>
-
-  
-
+    </accordion>
+  </div>
 </div>

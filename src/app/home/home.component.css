@@ -7,6 +7,21 @@
     /* opcional: bordas levemente arredondadas */
     margin-bottom: 1rem;
 }
+
 .jumbotron h2 {
     font-weight: bold;
+}
+
+:host::ng-deep {
+    span.icon-next.carousel-control-next-icon {
+        background-color: #d6bcd6;
+        border-radius: 100%;
+    }
+}
+:host::ng-deep{
+span.icon-prev.carousel-control-prev-icon{
+    background-color: #d6bcd6;
+    border-radius: 100%;
+    border-opacity: 0.7;
+}
 }

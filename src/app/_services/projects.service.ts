@@ -15,7 +15,7 @@ export class ProjectsService {
       description: 'Sistema completo com funcionalidades de login, cadastro, adição de livros, empréstimos e geração de relatórios em PDF utilizando .NET 8.0 e SQL Server.',
       projectLink: 'https://github.com/passossss/EmprestimoBooks',
       tags: [Tag.CSHARP, Tag.ASPNET, Tag.SQL],
-      pictures: ["../../../assets/portBook.png", "../../../assets/portBook.png"]
+      pictures: ["../../../assets/EmprestimoBooks/dash.png", "../../../assets/EmprestimoBooks/home.png", "../../../assets/EmprestimoBooks/login.png"]
     },
     {
       id: 1,

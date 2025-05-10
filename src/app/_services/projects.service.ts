@@ -43,7 +43,17 @@ export class ProjectsService {
       projectLink: 'https://github.com/seuusuario/testes-automatizados-robot',
       tags: [Tag.PYTHON, Tag.ROBOT],
       pictures: ["../../../assets/robot1.png"]
-    }
+    },
+    {
+    id: 4,
+      name: 'SoftDeCarona',
+      summary: 'App oferecer caronas estudantes da PUCPR',
+      description: 'Projeto feito com PHP, mysql para disciplica banco de dados.',
+      projectLink: 'https://github.com/passossss/SoftDeCarona',
+      tags: [Tag.PHP, Tag.JAVASCRIPT],
+      pictures: ["../../../assets/SoftDeCarona/minha.png", "../../../assets/SoftDeCarona/start.png", "../../../assets/SoftDeCarona/postfeed.png"]
+    }   
+
   ];
 
   constructor() { }

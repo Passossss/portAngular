@@ -25,6 +25,8 @@ export class Tag {
   static readonly BDD = new Tag('BDD', 'slateblue');
   static readonly SCRUM = new Tag('Scrum', 'lightseagreen');
   static readonly KANBAN = new Tag('Kanban', 'mediumslateblue');
+  static readonly PHP = new Tag('Php', 'slateblue');
+
 
   private constructor(private readonly key: string, public readonly color: string) {}
 

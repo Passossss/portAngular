@@ -14,7 +14,7 @@ export class ProjectsService {
       summary: 'Sistema de empréstimo de livros em ASP.NET',
       description: 'Sistema completo com funcionalidades de login, cadastro, adição de livros, empréstimos e geração de relatórios em PDF utilizando .NET 8.0 e SQL Server.',
       projectLink: 'https://github.com/passossss/EmprestimoBooks',
-      tags: [Tag.CSHARP, Tag.ASPNET, Tag.SQL],
+      tags: [Tag.CSHARP, Tag.ASPNET, Tag.SQLServer, Tag.DOTNET],
       pictures: ["../../../assets/portBook.png", "../../../assets/portBook.png"]
     },
     {
@@ -23,7 +23,7 @@ export class ProjectsService {
       summary: 'Aplicação para gestão médica',
       description: 'Aplicativo com foco em agendamentos, histórico de consultas e organização de dados médicos. Feito com Angular e backend em Node.js.',
       projectLink: 'https://github.com/passossss/medicaly.back',
-      tags: [Tag.ANGULAR, Tag.TYPESCRIPT, Tag.NODE],
+      tags: [Tag.ANGULAR, Tag.TYPESCRIPT, Tag.DOTNET],
       pictures: ["../../../assets/medicaly1.png", "../../../assets/medicaly2.png"]
     },
     { 
@@ -32,7 +32,7 @@ export class ProjectsService {
       summary: 'App de clima com consumo de API externa',
       description: 'Projeto feito com Vue.js que mostra a previsão do tempo usando uma API pública de clima.',
       projectLink: 'https://github.com/seuusuario/clima-app',
-      tags: [Tag.VUE, Tag.JAVASCRIPT],
+      tags: [Tag.VUE, Tag.JAVASCRIPT, Tag.TYPESCRIPT],
       pictures: ["../../../assets/clima1.png"]
     },
     {
@@ -41,11 +41,28 @@ export class ProjectsService {
       summary: 'Repositório de testes automatizados com Robot Framework',
       description: 'Projeto de automação de testes com foco em QA, usando Robot Framework e Python.',
       projectLink: 'https://github.com/seuusuario/testes-automatizados-robot',
-      tags: [Tag.PYTHON, Tag.ROBOT],
+      tags: [Tag.PYTHON,],
       pictures: ["../../../assets/robot1.png"]
+    },
+    {
+      id: 4,
+      name: 'Rh funcio',
+      summary: 'Projeto de gerenciamento de um sistema RH de empresas',
+      description: 'Projeto de gerenciamento de um sistema RH de empresas',
+      projectLink: 'https://github.com/passosssss/RHfuncio',
+      tags: [Tag.TYPESCRIPT, Tag.CSHARP, Tag.DOTNET, Tag.CSS],
+      pictures: ["../../../assets/robot1.png"]
+    },
+    {
+      id: 5,
+      name: 'Mestra',
+      summary: 'App para gerenciamento monetário e financeiro',
+      description: 'Aplicativo desenvolvido com Angular para gerenciamento de finanças pessoais.',
+      projectLink: 'https://github.com/appmestra/',
+      tags: [Tag.ANGULAR, Tag.TYPESCRIPT, Tag.CSS],
+      pictures: ["../../../assets/portfolio1.png", "../../../assets/portfolio2.png"]
     }
   ];
-
   constructor() { }
 
   GetProjects() {
